@@ -76,7 +76,7 @@
 .nav-item{
     list-style: none;
     margin: 0 30px 0 0;
-    font-weight: bold;
+    font-weight: 500;
     text-decoration: none;
     font-size: 1.6669rem;
 }
@@ -104,7 +104,7 @@ nav .logo {
 
 nav .logo h1 {
     margin-left: 5px;    
-    font-size: 2.6669rem;
+    font-size: 2.4rem;
 }
 
 
@@ -120,7 +120,7 @@ nav .logo h1 {
     cursor: pointer;
     text-align: center;
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 @media (max-width: 767px) {
