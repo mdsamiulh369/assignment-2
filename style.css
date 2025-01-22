@@ -1,0 +1,398 @@
+/* style.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", serif;
+}
+
+body {
+    font-size: 1rem;
+    color: #333;
+}
+
+.display-flex{
+    display: flex;
+}
+.bg-color{
+    background-color: #FFFFFF;
+}
+.text-orange{
+    color: #FEA301;
+}
+.text-skyblue{
+    color: #01ACFD;
+}
+.text-flashing{
+    color: #05D4DF;
+}
+.text-purple{
+    color: #5D58EF;
+}
+.text-black{
+    color: #111111;
+}
+
+.text-grey{
+    color: #808080;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+/* Marquee */
+.marquee {
+    padding: 1rem 0;
+    overflow: hidden;
+}
+
+.marquee p {
+    color: #01ACFD;
+    animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/* Navbar */
+
+.header{
+    padding: 0 141px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar{    
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo-school{
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.logo-school img {
+    height: 50px; /* Adjust logo size as needed */
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    justify-content: center;
+    
+}
+
+.nav-links a{
+    gap: 2rem;
+    list-style: none;
+    text-decoration: none;    
+}
+
+.nav-links a:hover {
+    color: #FEA301; /* Highlight color */
+}
+
+.nav-buttons {
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+
+.contact-btn {    
+    background-color: #FEA301;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-primary {
+    width: 197;
+    height: 50;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 600;
+}
+
+.menu{
+    display: none;
+}
+
+
+/* Banner */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    color: black;
+    margin-left: 141px;
+    margin-right: 141px;
+    border: 2px solid;    
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 1rem 0;
+}
+
+.hero img {
+    max-width: 40%;
+    height: auto;
+}
+
+.hero-btn{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        max-width: 100%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+}
+
+/* Standard Curriculum */
+.sections {
+    padding: 2rem;
+    text-align: center;
+    background: url('/assets/bg.png') no-repeat center center/cover;
+    margin-top: 60px;
+    margin-right: 141px;
+    margin-left: 141px;
+    border: 2px solid blue;
+
+}
+
+.sections h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.sections p{
+    color: #808080;
+    margin-bottom: 32px;
+}
+
+.sections h3 {
+    margin-top:32px;
+    margin-bottom: 32px;
+}
+
+.section {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+    flex: 1;
+    
+}
+
+.section button{
+    border: none;
+    background-color: none;
+}
+
+.sectionz{
+    justify-content: space-between;    
+    border: 2px solid red;
+    gap: 2rem;
+    
+}
+
+#section1{
+    background: linear-gradient(to bottom, #DEF5FF, white);
+    border: 2px solid;
+}
+#section2{
+    background: linear-gradient(to bottom, #FFF4DC, white);
+}
+#section3{
+    background: linear-gradient(to bottom, #F2E8FF, white);
+}
+
+
+
+
+/*curricululm navigation button*/
+.nav-btn {
+    background-color: #FEA301; /* Button color */
+    color: white;              /* Text color (for the arrow signs) */
+    border: none;
+    border-radius: 50%;        /* Makes the button circular */
+    width: 50px;               /* Button size */
+    height: 50px;              /* Button size */
+    display: flex;
+    justify-content: center;   /* Center the text inside the button */
+    align-items: center;       /* Center the text inside the button */
+    font-size: 24px;           /* Text size for the arrow signs */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-btn:hover {
+    background-color: #e6972e; /* Hover color */
+}
+
+/* Left Arrow Styling */
+.nav-btn.left {
+    margin-right: 10px;  /* Space between left and right button */
+}
+
+/* Right Arrow Styling */
+.nav-btn.right {
+    margin-left: 10px;  /* Space between left and right button */
+}
+
+.arrow {
+    font-size: 24px;           /* Size of the < or > */
+}
+
+
+
+/* Our Stories */
+
+#story{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.stories {    
+    border: 2px solid blue;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 19px;
+    margin-right: 141px;
+    margin-left: 141px;   
+}
+
+#box-1{
+    grid-row: span 2;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+#box-1 img{
+    flex: 1;
+}
+
+#box-1 div{
+    flex: 1;
+}
+
+.story-card {
+    border: 2px solid;
+    border-radius: 10px;
+    background: white;
+} 
+
+.story-card img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+} 
+
+.story-card h3{
+    padding: 20px 30px;
+    font-weight: 600;
+}
+
+.story-card p{
+    padding: 50px 30px;
+}
+
+.story-btn{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+footer{
+    text-align: left;
+    background-color: #01ACFD;
+    color: white;
+    padding: 1rem 0;
+    height: 200px;       
+}
+
+
+footer .footer-columns {
+    justify-content: space-between;
+    margin-left: 141px;
+    margin-right: 141px;
+}
+
+.foot-logo{
+    align-items: center;
+}
+
+.about{
+    flex-direction: column; 
+}
+footer ul {        
+    list-style: none;
+    margin-top: 32px;
+}
+
+footer ul li a {
+    text-decoration: none; 
+    color: white;
+}
+.keep-in-touch{
+    text-align: left;
+    flex-direction: column;
+}
+
+.keep-in-touch img{
+    margin-top: 30px;
+}
+
+
+@media (max-width: 767px) {
+    footer .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
