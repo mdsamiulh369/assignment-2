@@ -1,5 +1,28 @@
 /* styles.css */
 
+
+/* Marquee */
+.marquee {
+    padding: 1rem 0;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.marquee p {
+    animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 /* General Reset */
 * {
     margin: 0 auto;
@@ -7,12 +30,6 @@
     box-sizing: border-box;
     font-family: "Work Sans", serif;    
 }
-
-/* body {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-} */
 
 .display-flex{
     display: flex;
@@ -51,23 +68,31 @@
 /* Navbar */
 .navbar{
     justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    border: 2px solid;
+    box-sizing: border-box;
 }
 .nav-item{
     list-style: none;
-    margin-right: 30px;
+    margin: 0 30px 0 0;
     font-weight: bold;
     text-decoration: none;
     font-size: 1.6669rem;
 }
 .nav-links{
     text-decoration: none;
-    text-align: center;
+    display: flex;
     align-items: center;
+    margin: 0;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 header {        
-    border: 2px solid;
-    padding: 1rem 2rem;    
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid;  
     margin-right: 141px;
     margin-left: 141px;  
 }
@@ -116,14 +141,13 @@ nav .logo h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
     color: black;
     margin-left: 141px;
     margin-right: 141px;    
 }
 
 .hero-content {
-    max-width: 50%;
+    min-width: 57%;
 }
 
 .hero h1 {
@@ -136,8 +160,8 @@ nav .logo h1 {
 }
 
 .hero-img {
-    max-width: 40%;
-    height: auto;
+    min-width: 33%;
+    text-align: right;
 }
 
 .hero-btn{
@@ -163,7 +187,6 @@ nav .logo h1 {
 /* Standard Curriculum */
 
 .sections {
-    /* padding: 2rem; */
     text-align: center;
     background-image: url('/assets/bg.png');
     margin-top: 60px;
@@ -190,6 +213,9 @@ nav .logo h1 {
     margin-bottom: 32px;
 }
 
+#section2 img{
+    padding-top: 10px;
+}
 .section {
     padding: 1rem;
     border: 1px solid #ddd;
@@ -324,7 +350,7 @@ footer {
     background-color: #01ACFD;
     color: white;
     padding: 2.5rem 0;
-    height: 250px; 
+    height: 250px;
 }
 footer .footer-columns {
     justify-content: space-between;
@@ -332,7 +358,8 @@ footer .footer-columns {
     margin-right: 141px;
 }
 .footer-kids{
-    justify-content: left;
+    /* justify-content: left; */
+    flex-direction: column;
     margin-bottom: 35px;
 }
 .foot-logo{
@@ -340,12 +367,13 @@ footer .footer-columns {
     position: absolute;
     width: 299.71px;
     height: 81.65px;
-    left: 141px;
     top: 2695px;
 }
 
 .about{
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 footer ul {        
     list-style: none;
@@ -365,12 +393,15 @@ footer ul li a {
     color: white;
 }
 .keep-in-touch{
-    text-align: left;
+    /* text-align: left; */
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     
 }
 .keep-in-touch h3 {
     margin-bottom: 32px; /* Adjust the value as needed for spacing */
+    margin-right: 10px;
 }
 
 
@@ -381,25 +412,3 @@ footer ul li a {
     }
 }
 
-/* Marquee */
-.marquee {
-    background: #ff7f50;
-    color: white;
-    padding: 1rem 0;
-    overflow: hidden;
-    
-}
-
-.marquee p {
-    animation: scroll-left 10s linear infinite;
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
